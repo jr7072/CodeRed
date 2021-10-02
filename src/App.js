@@ -1,14 +1,11 @@
 import './App.css';
-import './Components/Landing/LandingCom'
-import { LandingComponent } from './Components/Landing/LandingCom';
+import {NavigationBar} from './Components/Nav/Nav.js';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
     <div className="App">
-      
-      <section>
-        <LandingComponent />
-      </section>
+      <NavigationBar />
     </div>
   );
 }
