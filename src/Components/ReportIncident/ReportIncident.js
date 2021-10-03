@@ -46,7 +46,7 @@ export const ReportIncidentModal = (props)=> {
 
                 <Modal.Footer>
                     <Button variant="secondary" onClick = {props.onHide}> Close </Button>
-                    <Button variant="primary"> Next </Button>
+                    <Button variant="primary" onClick = {props.onNext}> Next </Button>
                 </Modal.Footer>
             </Modal>
     )
