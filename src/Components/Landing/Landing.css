@@ -1,0 +1,65 @@
+.landing{
+
+    width: 100%;
+    background-color: black;
+    display: flex;
+}
+
+.landing .picture {
+
+    width: 50%;
+    min-height:100vh;
+    background-image: url("../../Assets/images/image2.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: cover;
+}
+
+.landing .login-section{
+
+    width: 50%;
+    min-height: 100vh;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-section .login{
+
+    width: 50%;
+    height: 40%;
+    background-color: #a7a3a3;
+    border: 3px solid #000000;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+   
+}
+
+.login h2{
+
+    text-align: center;
+    font-size: 4rem;
+}
+
+.login .login-input{
+
+    width: 30%;
+    height: 20%;
+    background-color: white;
+    border-radius: 10px;
+
+
+}
+
+.login .login-input, .login h2{
+
+    flex: 1 0 40%;
+    margin: 40px;
+}
+
+.login-input h2{
+    margin: 0;
+}
