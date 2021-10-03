@@ -1,4 +1,5 @@
 import React from 'react';
+import { GoogleButton } from '../../Util/Google/GoogleButton';
 
 export const Landing = () => {
 
@@ -13,7 +14,7 @@ export const Landing = () => {
                 <div className="login">
                     <h2>Login</h2>
                     <div className="login-input">
-                        <h2>Goooooogle</h2>
+                        <GoogleButton />
                     </div>
                 </div>
             </div>
