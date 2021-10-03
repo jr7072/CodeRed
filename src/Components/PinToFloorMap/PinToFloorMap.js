@@ -8,17 +8,12 @@ export const PinToFloorMapModal = (props)=> {
 
     const [markers, setMarkers] = useState([])
 
-    const handleOnImageClick = (e) => {
-        console.log(markers)
+    const handleOnShow = () => {
+        setMarkers([])
     }
-
-    const handleOnAddMarker = (marker) => {
-        setMarkers([marker])
-    }
-
     
     return(
-            <Modal show = {true} centered size = 'lg'>
+            <Modal show = {props.show} centered size = 'lg' onShow = {handleOnShow}>
                 <Modal.Header closeButton onHide = {props.onHide}>
                     <Modal.Title>Select Location of Incident</Modal.Title>
                 </Modal.Header>
@@ -31,7 +26,7 @@ export const PinToFloorMapModal = (props)=> {
         
                 <Modal.Footer>
                     <Button variant="secondary" onClick = {props.onHide}> Close </Button>
-                    <Button variant="primary"> Save </Button>
+                    <Button variant="primary" onClick = {props.onSubmit}> Save </Button>
                 </Modal.Footer>
             </Modal>
     )

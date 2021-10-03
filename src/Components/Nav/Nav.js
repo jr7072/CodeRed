@@ -7,15 +7,29 @@ import {useState} from 'react'
 
 export const NavigationBar = () => {
     const [showReportModal, setShowReportModal] = useState(false);
+    const [showPinToFloorModal, setShowPinToFloorModal] = useState(false); 
 
     const handleClose = () => {
         setShowReportModal(false);
+    }
+
+    const handlePinClose = () => {
+        setShowPinToFloorModal(false);
     }
 
     const handleShow = () => {
         setShowReportModal(true);
     }
 
+    const handleNext = () => {
+        setShowReportModal(false);
+        setShowPinToFloorModal(true);
+    }
+
+    const handleSubmit = () => {
+        setShowPinToFloorModal(false);
+        console.log("submitted!")
+    }
     return(
         <div>
             <Navbar bg="light" expand="lg" fixed="top">
@@ -40,9 +54,8 @@ export const NavigationBar = () => {
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
-            <PinToFloorMapModal/>
-            <ReportIncidentModal show = {showReportModal} onHide = {handleClose}/>
-            <PinToFloorMapModal/>
+            <ReportIncidentModal show = {showReportModal} onHide = {handleClose} onNext = {handleNext}/>
+            <PinToFloorMapModal show = {showPinToFloorModal} onHide = {handlePinClose} onSubmit = {handleSubmit}/>
         </div>
 
         
