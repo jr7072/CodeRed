@@ -36,7 +36,7 @@ export const HeatMapCom = () => {
     return (
 
         <HeatMap getPoints={getPoints} points={state}/>
-
+        
     )
     
 }

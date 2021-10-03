@@ -47,3 +47,9 @@
     background-color: #29388f;
     color: #ffffff;
 }
+
+.incidentTable{
+    overflow: scroll;
+    position: relative;
+    top: 50px;
+}

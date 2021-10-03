@@ -6,6 +6,7 @@ import { Card } from 'react-bootstrap';
 export const IncidentReportPage = () => {
 
     const [incidents, setIncidents] = useState([]);
+    const [incidentsForTable, setIncidentsForTable] = useState([]);
     const [isLoading, setLoading] = useState(true);
 
 
@@ -14,7 +15,7 @@ export const IncidentReportPage = () => {
         axios
         .get("http://localhost:5000/incident/")
         .then((res) => {
-
+            setIncidentsForTable(res.data);
             res.data = res.data.slice(res.data.length - 6, res.data.length);
             setIncidents(res.data.reverse());
         })
@@ -94,6 +95,32 @@ export const IncidentReportPage = () => {
             
 
         </div>
+        <Table className="incidentTable" striped bordered hover>
+                <thead>
+                    <tr>
+                    <th>Incident Name</th>
+                    <th>Employee</th>
+                    <th>Workplace</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Incident Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {incidentsForTable.map((x) => {
+                        return(
+                            <tr>
+                            <td>{x.IncidentName}</td>
+                            <td>{x.Employee}</td>
+                            <td>{x.Workplace}</td>
+                            <td>{x.Date}</td>
+                            <td>{x.Time}</td>
+                            <td>{convertIncidentType(x.IncidentType)}</td>
+                            </tr>
+                        )
+                    })}
+                </tbody>
+            </Table>
         </div>
         
     )

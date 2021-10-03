@@ -37,7 +37,7 @@ export const ReportIncidentModal = (props)=> {
                     </Form.Group>
 
                     <Form.Group className="mb-3" controlId="formWorkplace">
-                        <Form.Label>Employee Name</Form.Label>
+                        <Form.Label>Workplace</Form.Label>
                         <Form.Control type="text" placeholder="Enter Workplace name" onChange = {e => handleOnChange(e)}/>
                     </Form.Group>
 

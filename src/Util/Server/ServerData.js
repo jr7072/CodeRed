@@ -6,6 +6,6 @@ export const data = {
 
         return axios.get("http://localhost:5000/incident/")
         .then(response => response.data)
-        .then(data => data.map(item => [item.LocationX, item.LocationY]));
+        .then(data => data.map(item => [item.LocationX, item.LocationY, item.Workplace]));
     }
 }

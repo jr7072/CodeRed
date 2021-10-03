@@ -43,7 +43,7 @@ incidentRoutes.route("/incident/add").post(function (request, response) {
       IncidentName: request.body.IncidentName,
       Date: request.body.Date,
       Time: request.body.Time,
-      DateTime: 420,
+      DateTime: 400,
       Employee: request.body.Employee,
       Workplace: request.body.Workplace,
       IncidentType: request.body.IncidentType,

@@ -23,6 +23,7 @@ export const NavigationBar = () => {
     );
     const [showReportModal, setShowReportModal] = useState(false);
     const [showPinToFloorModal, setShowPinToFloorModal] = useState(false); 
+    const [showLocationTwo, setShowLocationTwo] = useState(false);
 
     const handleClose = () => {
         setIncidentModel ({
@@ -52,18 +53,25 @@ export const NavigationBar = () => {
             LocationY: 0,
         })
         setShowPinToFloorModal(false);
+        setShowLocationTwo(false);
     }
 
     const handleShow = () => {
+        setShowLocationTwo(false);
         setShowReportModal(true);
     }
 
     const handleNext = () => {
         setShowReportModal(false);
+        if(incidentModel.Workplace == "location2")
+        {
+            setShowLocationTwo(true);
+        }
         setShowPinToFloorModal(true);
     }
 
     const handleSubmit = () => {
+        setShowLocationTwo(false);
         setShowPinToFloorModal(false);
         axios
         .post("http://localhost:5000/incident/add", incidentModel)
@@ -150,7 +158,7 @@ export const NavigationBar = () => {
                 </Container>
             </Navbar>
             <ReportIncidentModal show = {showReportModal} onHide = {handleClose} onNext = {handleNext} onChange = {handleOnChange}/>
-            <PinToFloorMapModal show = {showPinToFloorModal} onHide = {handlePinClose} onSubmit = {handleSubmit} onChange = {handleOnChange}/>
+            <PinToFloorMapModal show = {showPinToFloorModal} onHide = {handlePinClose} onSubmit = {handleSubmit} onChange = {handleOnChange} showLocationTwo = {showLocationTwo}/>
         </div>
     )
 }
