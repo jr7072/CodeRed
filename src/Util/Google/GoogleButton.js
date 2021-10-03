@@ -6,10 +6,19 @@ import "./GoogleButton.css";
 const clientId = "bruh";
 
 
+
+export const GoogleData = {
+
+    image: null,
+}
+
 export const GoogleButton = () => {
 
-    const onSuccess = () => {
+    const onSuccess  = (response) => {
+
+        GoogleData.image = response.profileObj.imageUrl;
         window.location.href = "http://localhost:3000/home";
+
     }
     
     const onFailure = () => {
