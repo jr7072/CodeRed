@@ -12,6 +12,8 @@ import { HeatMapCom } from './Components/HeatMap/HeatMapCom';
 import {Location1} from "./Components/Maps/Map1";
 import {Location2} from "./Components/Maps/Map2";
 import { HeatLanding } from './Components/HeatMap/HeatLanding';
+import {ChemicalInjury} from './Components/ChemicalInjury/ChemicalInjury';
+import { VehicleStrike } from './Components/VehicleStrike/VehicleStrike';
 
 
 function App() {
@@ -37,6 +39,14 @@ function App() {
             <Route path="/incidentReport" exact>
               <NavigationBar />
               <IncidentReportComponent />
+            </Route>
+            <Route path="/incidentReport/9516548213" exact>
+              <NavigationBar />
+              <ChemicalInjury />
+            </Route>
+            <Route path="/incidentReport/1534567586" exact>
+              <NavigationBar />
+              <VehicleStrike />
             </Route>
             <Route path="/training" >
               <NavigationBar />
