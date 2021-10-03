@@ -7,6 +7,7 @@ import { LandingComponent } from './Components/Landing/LandingCom';
 import { TrainingComponent } from './Components/Training/TrainingCom';
 import { HomeCom } from './Components/Home/HomeCom'
 import React, {useState} from "react"
+import { IncidentReportComponent } from './Components/IncidentReport/IncidentReport';
 
 
 function App() {
@@ -29,10 +30,9 @@ function App() {
                 </div>
               )
             }}/>
-
             <Route path="/incidentReport" exact>
               <NavigationBar />
-              <ReportIncidentModal />
+              <IncidentReportComponent />
             </Route>
             <Route path="/training" >
               <NavigationBar />
