@@ -1,6 +1,5 @@
 import React from 'react';
 import { CarouselCom } from '../../Components/Carousal/CarouselCom';
-import { Google } from '../../Util/Google/Google';
 export const Home = ({name}) => {
 
     return(

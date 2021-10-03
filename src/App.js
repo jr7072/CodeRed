@@ -12,13 +12,8 @@ import { HeatMapCom } from './Components/HeatMap/HeatMapCom';
 import {Location1} from "./Components/Maps/Map1";
 import {Location2} from "./Components/Maps/Map2";
 import { HeatLanding } from './Components/HeatMap/HeatLanding';
-<<<<<<< HEAD
-import {Google} from "./Util/Google/Google";
-
-=======
 import {ChemicalInjury} from './Components/ChemicalInjury/ChemicalInjury';
 import { VehicleStrike } from './Components/VehicleStrike/VehicleStrike';
->>>>>>> 849e5af0a3d9af75fa40befe5bff97e3d77657a4
 
 
 function App() {
