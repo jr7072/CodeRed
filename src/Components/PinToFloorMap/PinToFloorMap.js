@@ -9,9 +9,14 @@ export const PinToFloorMapModal = (props)=> {
     const [markers, setMarkers] = useState([])
 
     const handleOnShow = () => {
-        setMarkers([])
+        setMarkers([]);
     }
     
+    const handleonAddMarker = (marker) => {
+        setMarkers([marker]);
+        props.onChange("Location", marker)
+    }
+
     return(
             <Modal show = {props.show} centered size = 'lg' onShow = {handleOnShow}>
                 <Modal.Header closeButton onHide = {props.onHide}>
@@ -21,7 +26,7 @@ export const PinToFloorMapModal = (props)=> {
                 <ImageMarker
                     src="https://rocketlister.com/wp-content/uploads/2019/11/17820-Claremont-2D-Floorplan.jpg"
                     markers={markers}
-                    onAddMarker={(marker) => setMarkers([marker])}
+                    onAddMarker={(marker) => handleonAddMarker(marker)}
                 />
         
                 <Modal.Footer>

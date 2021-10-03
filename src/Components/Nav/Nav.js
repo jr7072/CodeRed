@@ -2,18 +2,55 @@ import {Navbar, Nav, Container, NavDropdown, Button} from 'react-bootstrap'
 import {ReportIncidentModal} from '../ReportIncident/ReportIncident';
 import {PinToFloorMapModal} from '../PinToFloorMap/PinToFloorMap';
 import React from 'react'
+import axios from 'axios';
 import './Nav.css'
 import {useState} from 'react'
 
 export const NavigationBar = () => {
+
+    const [incidentModel, setIncidentModel] = useState(
+        {
+            IncidentName: "",
+            Date: 0,
+            Time: 0,
+            DateTime: 0,
+            Employee: "",
+            Workplace: "",
+            IncidentType: "",
+            LocationX: 0,
+            LocationY: 0,
+        }
+    );
     const [showReportModal, setShowReportModal] = useState(false);
     const [showPinToFloorModal, setShowPinToFloorModal] = useState(false); 
 
     const handleClose = () => {
+        setIncidentModel ({
+            IncidentName: "",
+            Date: 0,
+            Time: 0,
+            DateTime: 0,
+            Employee: "",
+            Workplace: "",
+            IncidentType: "",
+            LocationX: 0,
+            LocationY: 0,
+        })
         setShowReportModal(false);
     }
 
     const handlePinClose = () => {
+        setIncidentModel ({
+            IncidentName: "",
+            Date: 0,
+            Time: 0,
+            DateTime: 0,
+            Employee: "",
+            Workplace: "",
+            IncidentType: "",
+            LocationX: 0,
+            LocationY: 0,
+        })
         setShowPinToFloorModal(false);
     }
 
@@ -28,8 +65,65 @@ export const NavigationBar = () => {
 
     const handleSubmit = () => {
         setShowPinToFloorModal(false);
-        console.log("submitted!")
+        axios
+        .post("http://localhost:5000/incident/add", incidentModel)
+        .then((res) => console.log(res.data));
     }
+
+    const handleOnChange = (formName, formValue) => {
+        if(formName == "formIncidentName")
+        {
+            setIncidentModel(prevState => ({
+                ...prevState,
+                IncidentName: formValue
+            }))
+        }
+        else if(formName == "formDate")
+        {
+            setIncidentModel(prevState => ({
+                ...prevState,
+                Date: formValue
+            }))
+        }
+        else if(formName == "formTime")
+        {
+            setIncidentModel(prevState => ({
+                ...prevState,
+                Time: formValue
+            }))
+        }
+        else if(formName == "formWorkplace")
+        {
+            setIncidentModel(prevState => ({
+                ...prevState,
+                Workplace: formValue
+            }))
+        }
+        else if(formName == "formEmployeeName")
+        {
+            setIncidentModel(prevState => ({
+                ...prevState,
+                Employee: formValue
+            }))
+        }
+        else if(formName == "formIncidentType")
+        {
+            setIncidentModel(prevState => ({
+                ...prevState,
+                IncidentType: formValue
+            }))
+        }
+        else if(formName == "Location")
+        {
+            setIncidentModel(prevState => ({
+                ...prevState,
+                LocationX: formValue.left,
+                LocationY: formValue.top
+            }))
+        }
+
+    }
+
     return(
         <div>
             <Navbar bg="light" expand="lg" fixed="top">
@@ -54,10 +148,8 @@ export const NavigationBar = () => {
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
-            <ReportIncidentModal show = {showReportModal} onHide = {handleClose} onNext = {handleNext}/>
-            <PinToFloorMapModal show = {showPinToFloorModal} onHide = {handlePinClose} onSubmit = {handleSubmit}/>
+            <ReportIncidentModal show = {showReportModal} onHide = {handleClose} onNext = {handleNext} onChange = {handleOnChange}/>
+            <PinToFloorMapModal show = {showPinToFloorModal} onHide = {handlePinClose} onSubmit = {handleSubmit} onChange = {handleOnChange}/>
         </div>
-
-        
     )
 }
