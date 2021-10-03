@@ -1,7 +1,7 @@
 import React from 'react';
 import { GoogleButton } from '../../Components/GoogleButtons/GoogleButton';
 
-export const Landing = () => {
+export const Landing = ({handleName}) => {
 
     return(
 
@@ -14,7 +14,7 @@ export const Landing = () => {
                 <div className="login">
                     <h2>Login</h2>
                     <div className="login-input">
-                        <GoogleButton />
+                        <GoogleButton handleName={handleName}/>
                     </div>
                 </div>
             </div>

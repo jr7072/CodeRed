@@ -5,11 +5,13 @@ import { Google } from '../../Util/Google/Google';
 
 
 
-export const GoogleButton = () => {
+export const GoogleButton = ({handleName}) => {
 
     const onAccept = (response) => {
 
-        window.location.href = "http://localhost:3000/home"
+
+        handleName(response);
+        window.location.href = "http://localhost:3000/home";
     }
 
     return(

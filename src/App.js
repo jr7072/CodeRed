@@ -12,10 +12,18 @@ import { HeatMapCom } from './Components/HeatMap/HeatMapCom';
 import {Location1} from "./Components/Maps/Map1";
 import {Location2} from "./Components/Maps/Map2";
 import { HeatLanding } from './Components/HeatMap/HeatLanding';
+import {Google} from "./Util/Google/Google";
+
 
 
 function App() {
 
+  const [name, setName] = useState("");
+
+  const handleName = (response) => {
+
+    setName(response.profileObj.name);
+  }
 
   return (
     <div className="App">
@@ -24,13 +32,13 @@ function App() {
         <Router>
           <Switch>
             <Route path="/" exact>
-              <LandingComponent />
+              <LandingComponent handleName={handleName}/>
             </Route>
             <Route path="/home" exact render={props => {
               return (
                 <div>
                 <NavigationBar />
-                <HomeCom />
+                <HomeCom name={name}/>
                 </div>
               )
             }}/>

@@ -3,9 +3,9 @@ import {Landing} from "../../Pages/Landing/Landing";
 import "./Landing.css"
 
 
-export const LandingComponent = () => {
+export const LandingComponent = ({handleName}) => {
 
     return (
-        <Landing />
+        <Landing handleName={handleName} />
     )
 }
