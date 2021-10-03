@@ -3,7 +3,7 @@ import GoogleLogin from  'react-google-login';
 
 import "./GoogleButton.css";
 
-const clientId = "bruh";
+const clientId = "null";
 
 export const GoogleButton = () => {
 
@@ -15,7 +15,7 @@ export const GoogleButton = () => {
             onFailure={null}
             cookiePolicy={'single_host_origin'}
             className="google-button"
-            isSignedIn={true}
+        
         />
     )
 }
