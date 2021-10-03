@@ -4,6 +4,9 @@ import {ReportIncidentModal} from './Components/ReportIncident/ReportIncident';
 import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom"; 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { LandingComponent } from './Components/Landing/LandingCom';
+import { TrainingComponent } from './Components/Training/TrainingCom';
+import { HomeCom } from './Components/Home/HomeCom'
+
 
 function App() {
 
@@ -19,9 +22,15 @@ function App() {
             </Route>
             <Route path="/home" exact>
               <NavigationBar />
+              <HomeCom />
             </Route>
             <Route path="/incidentReport" exact>
+              <NavigationBar />
               <ReportIncidentModal />
+            </Route>
+            <Route path="/training" >
+              <NavigationBar />
+              <TrainingComponent />
             </Route>
           </Switch>
         </Router>
