@@ -5,7 +5,7 @@ import { Table } from 'react-bootstrap';
 export const VehicleStrike = () => {
 
     return(
-        <div className="chemical-injury">
+        <div className="vehicle-strike">
             <div className="image">
             </div>
             <div className="text-box">
