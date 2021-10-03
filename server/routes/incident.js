@@ -38,10 +38,24 @@ incidentRoutes.route("/incident/:id").get(function (request, res) {
 // This section will help you create a new incident.
 incidentRoutes.route("/incident/add").post(function (request, response) {
   let db_connect = dbo.getDb();
+<<<<<<< HEAD
   let myobj = {
     person_name: request.body.person_name,
     person_position: request.body.person_position,
     person_level: request.body.person_level,
+=======
+  console.log(request)
+  let myobj = {
+      IncidentName: request.body.IncidentName,
+      Date: request.body.Date,
+      Time: request.body.Time,
+      DateTime: 420,
+      Employee: request.body.Employee,
+      Workplace: request.body.Workplace,
+      IncidentType: request.body.IncidentType,
+      LocationX: request.body.LocationX,
+      LocationY: request.body.LocationY
+>>>>>>> 62046f911eac6e038abff2069fb77a123e2d5f6f
   };
   db_connect.collection("Incidents").insertOne(myobj, function (err, res) {
     if (err) throw err;

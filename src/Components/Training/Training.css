@@ -1,0 +1,13 @@
+.training{
+
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+
+}
+.slides{
+
+    width: 100%;
+    height: 600px;
+
+}
