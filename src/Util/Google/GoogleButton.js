@@ -3,7 +3,7 @@ import GoogleLogin from  'react-google-login';
 
 import "./GoogleButton.css";
 
-const clientId = "bruh";
+const clientId = "139033022767-4c6ha4fmr7h2nsqhdp5u5sfkdtlajvrc.apps.googleusercontent.com";
 
 
 

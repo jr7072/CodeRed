@@ -13,9 +13,9 @@ const ObjectId = require("mongodb").ObjectId;
 
 // This section will help you get a list of all the incidents.
 incidentRoutes.route("/incident").get(function (req, res) {
-  let db_connect = dbo.getDb("employees");
+  let db_connect = dbo.getDb("Safety");
   db_connect
-    .collection("incidents")
+    .collection("Incidents")
     .find({})
     .toArray(function (err, result) {
       if (err) throw err;
@@ -28,7 +28,7 @@ incidentRoutes.route("/incident/:id").get(function (request, res) {
   let db_connect = dbo.getDb();
   let myquery = { _id: ObjectId( request.params.id )};
   db_connect
-      .collection("incidents")
+      .collection("Incidents")
       .findOne(myquery, function (err, result) {
         if (err) throw err;
         res.json(result);
@@ -43,7 +43,7 @@ incidentRoutes.route("/incident/add").post(function (request, response) {
     person_position: request.body.person_position,
     person_level: request.body.person_level,
   };
-  db_connect.collection("incidents").insertOne(myobj, function (err, res) {
+  db_connect.collection("Incidents").insertOne(myobj, function (err, res) {
     if (err) throw err;
     response.json(res);
   });
@@ -61,7 +61,7 @@ incidentRoutes.route("/incident/:id").post(function (request, response) {
     },
   };
   db_connect
-    .collection("incident")
+    .collection("Incidents")
     .updateOne(myquery, newvalues, function (error, res) {
       if (err) throw error;
       console.log("1 document updated");
@@ -73,7 +73,7 @@ incidentRoutes.route("/incident/:id").post(function (request, response) {
 incidentRoutes.route("/:id").delete((request, response) => {
   let db_connect = dbo.getDb();
   let myquery = { _id: ObjectId( request.params.id )};
-  db_connect.collection("incident").deleteOne(myquery, function (err, obj) {
+  db_connect.collection("Incidents").deleteOne(myquery, function (err, obj) {
     if (err) throw err;
     console.log("1 document deleted");
     response.status(obj);
