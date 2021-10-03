@@ -1,8 +1,11 @@
 import {Navbar, Nav, Container, NavDropdown} from 'react-bootstrap'
 import React from 'react'
 import './Nav.css'
+import { GoogleData } from '../../Util/Google/GoogleButton'
+
 
 export const NavigationBar = () => {
+
     return(
         <Navbar bg="light" expand="lg">
         <Container>
@@ -20,6 +23,9 @@ export const NavigationBar = () => {
                 <NavDropdown.Divider />
                 <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
                 </NavDropdown>
+                <Navbar.Brand >
+                    <img src={null} alt="profile"/>
+                </Navbar.Brand>
             </Nav>
             </Navbar.Collapse>
         </Container>
