@@ -1,5 +1,5 @@
 import React from 'react';
-import { GoogleButton } from '../../Util/Google/GoogleButton';
+import { GoogleButton } from '../../Components/GoogleButtons/GoogleButton';
 
 export const Landing = () => {
 

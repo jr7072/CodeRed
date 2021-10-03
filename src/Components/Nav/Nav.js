@@ -5,7 +5,7 @@ import React from 'react'
 import axios from 'axios';
 import './Nav.css'
 import {useState} from 'react'
-
+import { GoogleButtonOut } from '../GoogleButtons/GoogleLogout';
 export const NavigationBar = () => {
 
     const [incidentModel, setIncidentModel] = useState(
@@ -139,9 +139,9 @@ export const NavigationBar = () => {
                         <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                         <NavDropdown.Item href="/action/3.1">Heatmap</NavDropdown.Item>
                         <NavDropdown.Item href="/action/3.2">Training</NavDropdown.Item>
-                        <NavDropdown.Item href="/action/3.3">Something</NavDropdown.Item>
+                        <NavDropdown.Item href="/action/3.3"><GoogleButtonOut /></NavDropdown.Item>
                         <NavDropdown.Divider />
-                        <NavDropdown.Item href="/action/3.4">Separated link</NavDropdown.Item>
+                        <NavDropdown.Item href="/action/3.4"></NavDropdown.Item>
                         </NavDropdown>
                         <Button variant="primary" onClick={handleShow}>Report Incident</Button>
                     </Nav>

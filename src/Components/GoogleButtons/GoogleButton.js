@@ -1,9 +1,9 @@
 import React from 'react';
-import GoogleLogin from  'react-google-login';
-
+import {GoogleLogin} from  'react-google-login';
 import "./GoogleButton.css";
+import { Google } from '../../Util/Google/Google';
 
-const clientId = "139033022767-4c6ha4fmr7h2nsqhdp5u5sfkdtlajvrc.apps.googleusercontent.com";
+
 
 export const GoogleButton = () => {
 
@@ -14,7 +14,7 @@ export const GoogleButton = () => {
 
     return(
         <GoogleLogin 
-            clientId={clientId}
+            clientId={Google.uri}
             buttonText="Login"
             onSuccess={onAccept}
             onFailure={null}
