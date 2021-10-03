@@ -15,7 +15,11 @@
     "react-bootstrap": "^2.0.0-rc.0",
     "react-dom": "^17.0.2",
     "react-google-login": "^5.2.2",
+<<<<<<< HEAD
     "react-image-mapper": "^0.0.15",
+=======
+    "react-image-marker": "^1.2.0",
+>>>>>>> c716b4ae03b026c1ee3a6a93cd95899d4a35ee7a
     "react-router-dom": "^5.3.0",
     "react-scripts": "^4.0.3",
     "web-vitals": "^1.0.1"

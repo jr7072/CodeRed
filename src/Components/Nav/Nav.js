@@ -1,5 +1,6 @@
 import {Navbar, Nav, Container, NavDropdown, Button} from 'react-bootstrap'
 import {ReportIncidentModal} from '../ReportIncident/ReportIncident';
+import {PinToFloorMapModal} from '../PinToFloorMap/PinToFloorMap';
 import React from 'react'
 import './Nav.css'
 import {useState} from 'react'
@@ -39,7 +40,9 @@ export const NavigationBar = () => {
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
+            <PinToFloorMapModal/>
             <ReportIncidentModal show = {showReportModal} onHide = {handleClose}/>
+            <PinToFloorMapModal/>
         </div>
 
         
