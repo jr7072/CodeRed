@@ -137,11 +137,12 @@ export const NavigationBar = () => {
                         <Nav.Link href="/heatmap">Heatmap</Nav.Link>
                         <Nav.Link href="/training">Training</Nav.Link>
                         <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                        <NavDropdown.Item href="/action/3.1">Heatmap</NavDropdown.Item>
-                        <NavDropdown.Item href="/action/3.2">Training</NavDropdown.Item>
-                        <NavDropdown.Item href="/action/3.3"><GoogleButtonOut /></NavDropdown.Item>
+                        <NavDropdown.Item href="/home">Home</NavDropdown.Item>
+                        <NavDropdown.Item href="/incidentReport">IncidentReport</NavDropdown.Item>
+                        <NavDropdown.Item href="/heatmap">HeatMap</NavDropdown.Item>
+                        <NavDropdown.Item href="/training">Training</NavDropdown.Item>
                         <NavDropdown.Divider />
-                        <NavDropdown.Item href="/action/3.4"></NavDropdown.Item>
+                        <NavDropdown.Item href="/action/3.5"><GoogleButtonOut /></NavDropdown.Item>
                         </NavDropdown>
                         <Button variant="primary" onClick={handleShow}>Report Incident</Button>
                     </Nav>

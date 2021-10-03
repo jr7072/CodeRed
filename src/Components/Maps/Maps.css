@@ -1,0 +1,6 @@
+.map{
+    position: relative;
+    top: 100px;
+    min-height: 80vh;
+    background-color: red;
+}

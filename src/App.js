@@ -9,6 +9,9 @@ import { HomeCom } from './Components/Home/HomeCom'
 import React, {useState} from "react"
 import { IncidentReportComponent } from './Components/IncidentReport/IncidentReport';
 import { HeatMapCom } from './Components/HeatMap/HeatMapCom';
+import {Location1} from "./Components/Maps/Map1";
+import {Location2} from "./Components/Maps/Map2";
+import { HeatLanding } from './Components/HeatMap/HeatLanding';
 
 
 function App() {
@@ -39,9 +42,20 @@ function App() {
               <NavigationBar />
               <TrainingComponent />
             </Route>
-            <Route path="/heatmap" >
+            <Route path="/heatmap" exact >
               <NavigationBar />
               <HeatMapCom />
+              <HeatLanding />
+            </Route>
+            <Route path="/heatmap/location-1">
+              <NavigationBar />
+              <HeatMapCom />
+              <Location1 />
+            </Route>
+            <Route path="/heatmap/location-2">
+              <NavigationBar />
+              <HeatMapCom />
+              <Location2 />
             </Route>
           </Switch>
         </Router>
