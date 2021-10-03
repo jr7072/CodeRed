@@ -9,7 +9,7 @@ export const Training = () => {
         <h1>Pannellum React Component</h1>
         <Pannellum
             width="100%"
-            height="700px"
+            height="950px"
             image={wideBoy}
             pitch={10}
             yaw={180}

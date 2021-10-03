@@ -13,7 +13,7 @@
     margin-left: 30px;
 }
 
-.chemical-injury{
+.vehicle-strike{
 
     height: 89.6vh;
     width: 100%;
@@ -22,7 +22,7 @@
 
 }
 
-.chemical-injury .image {
+.vehicle-strike .image {
 
     width: 50%;
     height: 100%;
@@ -32,7 +32,7 @@
     background-size: cover;
 }
 
-.chemical-injury .text-box{
+.vehicle-strike .text-box{
 
     width: 50%;
     height: 100%;
@@ -42,7 +42,7 @@
     justify-content: center;
 }
 
-.chemical-injury .text-box h2 
+.vehicle-strike .text-box h2 
 {
 
     font-size: 2.5rem;
