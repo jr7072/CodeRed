@@ -53,3 +53,12 @@
     position: relative;
     top: 50px;
 }
+
+.card-title{
+    margin-bottom: 10px;
+}
+
+.card-subtitle {
+
+    color: white !important;
+}
