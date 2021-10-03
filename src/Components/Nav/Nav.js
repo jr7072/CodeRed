@@ -2,6 +2,7 @@ import {Navbar, Nav, Container, NavDropdown, Button} from 'react-bootstrap'
 import {ReportIncidentModal} from '../ReportIncident/ReportIncident';
 import {PinToFloorMapModal} from '../PinToFloorMap/PinToFloorMap';
 import React from 'react'
+import axios from 'axios';
 import './Nav.css'
 import {useState} from 'react'
 
@@ -64,7 +65,9 @@ export const NavigationBar = () => {
 
     const handleSubmit = () => {
         setShowPinToFloorModal(false);
-        console.log("submitted!")
+        axios
+        .post("http://localhost:5000/incident/add", incidentModel)
+        .then((res) => console.log(res.data));
     }
 
     const handleOnChange = (formName, formValue) => {
@@ -118,7 +121,7 @@ export const NavigationBar = () => {
                 LocationY: formValue.top
             }))
         }
-        console.log(incidentModel);
+
     }
 
     return(
