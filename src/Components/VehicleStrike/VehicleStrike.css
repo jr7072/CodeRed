@@ -1,0 +1,50 @@
+.banner{
+    background-color: blue;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.chemical-injury{
+
+    height: 40px;
+    font-size: 1.25rem;
+    margin-left: 30px;
+}
+
+.chemical-injury{
+
+    height: 89.6vh;
+    width: 100%;
+    display: flex;
+
+
+}
+
+.chemical-injury .image {
+
+    width: 50%;
+    height: 100%;
+    background-image: url("../../Assets/images/mock2.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: cover;
+}
+
+.chemical-injury .text-box{
+
+    width: 50%;
+    height: 100%;
+    background-color:  #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chemical-injury .text-box h2 
+{
+
+    font-size: 2.5rem;
+}
+
