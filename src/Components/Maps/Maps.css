@@ -1,0 +1,26 @@
+.map{
+    position: relative;
+    top: 100px;
+    min-height: 80vh;
+    background-color: red;
+}
+
+.heatMapIcon{
+    border-radius: 10%;
+    opacity: 0.8;
+    max-width: 250px;
+    margin-left: 120px;
+    margin-top: 110px;
+}
+
+.sugma {
+    width: 100%;
+    margin-left: 150px;
+    margin-top: 100px;
+}
+
+.sugma .image-marker__image{
+    width: 100%;
+    margin-left: 200px;
+    margin-top: 250px;
+}
