@@ -8,6 +8,7 @@ import { TrainingComponent } from './Components/Training/TrainingCom';
 import { HomeCom } from './Components/Home/HomeCom'
 import React, {useState} from "react"
 import { IncidentReportComponent } from './Components/IncidentReport/IncidentReport';
+import { HeatMapCom } from './Components/HeatMap/HeatMapCom';
 
 
 function App() {
@@ -37,6 +38,10 @@ function App() {
             <Route path="/training" >
               <NavigationBar />
               <TrainingComponent />
+            </Route>
+            <Route path="/heatmap" >
+              <NavigationBar />
+              <HeatMapCom />
             </Route>
           </Switch>
         </Router>
