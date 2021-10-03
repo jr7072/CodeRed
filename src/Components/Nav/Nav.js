@@ -11,8 +11,8 @@ export const NavigationBar = () => {
             <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
                 <Nav.Link href="#home">Home</Nav.Link>
-                <Nav.Link href="#link">Incident Report</Nav.Link>
-                <Nav.Link href="#link">Heatmap</Nav.Link>
+                <Nav.Link href="#incidentReport">Incident Report</Nav.Link>
+                <Nav.Link href="#heatmap">Heatmap</Nav.Link>
                 <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">Heatmap</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">Training</NavDropdown.Item>
